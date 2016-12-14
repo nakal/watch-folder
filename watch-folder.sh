@@ -34,8 +34,10 @@ fi
 mtreefile=${mtreedirroot}/`printf "%s" "$dir" | /sbin/sha256`.mtree
 mygroup=`/usr/bin/id -gn`
 
-# default keywords, see man
-keywordspec="-k sha256 -nbx"
+# default keywords, see man mtree
+#keywordspec="-k sha256 -nbx"
+keywordspec="-nbx"
+#keywordspec=""
 
 if [ -r "$mtreefile" ]; then
 	#echo "Found $mtreefile."
